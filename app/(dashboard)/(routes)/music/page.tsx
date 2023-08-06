@@ -17,7 +17,7 @@ import { Loader } from "@/components/loader";
 import { Empty } from "@/components/ui/empty";
 // import { useProModal } from "@/hooks/use-pro-modal";
 
-// import { formSchema } from "./constants";
+import { formSchema } from "./constants";
 
 const MusicPage = () => {
   // const proModal = useProModal();
