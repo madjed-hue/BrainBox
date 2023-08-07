@@ -8,7 +8,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar isPro={true} apiLimitCount={0} />
       </div>
       <main className="md:pl-72">
-        {" "}
         <Navbar /> {children}
       </main>
     </div>
