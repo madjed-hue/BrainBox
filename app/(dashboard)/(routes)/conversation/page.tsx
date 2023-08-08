@@ -20,10 +20,11 @@ import { Empty } from "@/components/ui/empty";
 import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 import { cn } from "@/lib/utils";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const ConversationPage = () => {
   const router = useRouter();
-  // const proModal = useProModal();
+  const proModal = useProModal();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -51,12 +52,11 @@ const ConversationPage = () => {
 
       form.reset();
     } catch (error: any) {
-      // if (error?.response?.status === 403) {
-      //   proModal.onOpen();
-      // } else {
-      // toast.error("Something went wrong.");
-      // }
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      } else {
+        toast.error("Something went wrong.");
+      }
     } finally {
       router.refresh();
     }
