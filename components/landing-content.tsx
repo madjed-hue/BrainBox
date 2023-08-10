@@ -11,13 +11,13 @@ const testimonials = [
   },
   {
     name: "Houssem",
-    avatar: "A",
+    avatar: "H",
     title: "Designer",
     description: "I use this daily for generating new photos!",
   },
   {
     name: "Adel",
-    avatar: "M",
+    avatar: "A",
     title: "CEO",
     description:
       "This app has changed my life, cannot imagine working without it!",
