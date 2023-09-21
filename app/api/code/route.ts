@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     }
 
     if (!configuration.apiKey) {
-      return new NextResponse("OpenAI API Key not configured.", {
+      return new NextResponse("OpenAI API Key not Provided.", {
         status: 500,
       });
     }
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
 
     if (!freeTrial) {
       return new NextResponse(
-        "Free trial has expired. Please upgrade to pro.",
+        "Free trial has expired. Please upgrade to pro plan.",
         { status: 403 }
       );
     }
